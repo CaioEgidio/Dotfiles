@@ -11,6 +11,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'honza/vim-snippets'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
+
 Plug 'jiangmiao/auto-pairs'
 
 if (has("nvim"))
@@ -32,6 +35,11 @@ colorscheme monokai-pro
 " AirLine """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='<theme>'
+
+
+
+
 
 
 
@@ -76,7 +84,8 @@ endif
 
 " COC (Conquer of Completion) """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:coc_global_extensions = [ 'coc-snippets', ]
+let g:coc_global_extensions = [ 'coc-snippets', 'coc-git']
+
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
@@ -276,3 +285,4 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
