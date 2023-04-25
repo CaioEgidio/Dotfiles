@@ -13,6 +13,9 @@ Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'honza/vim-snippets'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'morhetz/gruvbox'
+Plug 'rafi/awesome-vim-colorschemes'
+
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -26,17 +29,23 @@ call plug#end()
 set number 
 set relativenumber 
 set mouse=a
+set smartindent
+set history=5000
+set clipboard=unnamedplus
+set tabstop=2 softtabstop=2 expandtab shiftwidth=2
+set cursorline
+
 
 
 " Themes """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme monokai-pro
+colorscheme gruvbox
+
 
 
 " AirLine """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='<theme>'
-
+let g:airline_theme='dark'
 
 
 
@@ -84,7 +93,7 @@ endif
 
 " COC (Conquer of Completion) """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:coc_global_extensions = [ 'coc-snippets', 'coc-git']
+let g:coc_global_extensions = [ 'coc-snippets', 'coc-git' , 'coc-json', 'coc-tsserver' ]
 
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
