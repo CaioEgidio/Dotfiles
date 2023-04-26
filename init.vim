@@ -68,9 +68,16 @@ map <C-l> <C-w>l
 
 
 " ALE """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\   'cpp': [],
+\   'c': [],
+\}
 
-
-
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\   'cpp': ['clang-format'],
+\   'c': ['clang-format'],
+\}
 
 
 
@@ -93,7 +100,7 @@ endif
 
 " COC (Conquer of Completion) """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:coc_global_extensions = [ 'coc-snippets', 'coc-git' , 'coc-json', 'coc-tsserver' ]
+let g:coc_global_extensions = [ 'coc-snippets', 'coc-git' , 'coc-json', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-python', 'coc-java', 'coc-react-refactor', 'coc-clangd' ]
 
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
@@ -257,7 +264,9 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-
+" coc reactjs
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 
 
