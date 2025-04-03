@@ -1,0 +1,56 @@
+[terminal.shell]
+program = "wsl.exe"
+args = ["--cd", "~", "-d", "Ubuntu"]
+
+[font]
+normal.family = "FiraCode Nerd Font Mono"
+size = 14
+
+[window]
+opacity = 0.8  # Transparência
+padding.x = 0
+padding.y = 10
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control"
+action = "Copy"
+
+
+[colors.primary]
+background = "#0f172a"  # Azul escuro bem profundo
+foreground = "#e2e8f0"  # Branco azulado
+
+[colors.cursor]
+text = "#0f172a"
+cursor = "#e2e8f0"
+
+[colors.normal]
+black   = "#1e293b"  # Cinza escuro
+red     = "#f43f5e"  # Vermelho vibrante
+green   = "#10b981"  # Verde neon
+yellow  = "#facc15"  # Amarelo ouro
+blue    = "#3b82f6"  # Azul elétrico
+magenta = "#a855f7"  # Roxo brilhante
+cyan    = "#06b6d4"  # Ciano neon
+white   = "#e2e8f0"  # Branco sutil
+
+[colors.bright]
+black   = "#334155"
+red     = "#fb7185"
+green   = "#34d399"
+yellow  = "#fde047"
+blue    = "#60a5fa"
+magenta = "#c084fc"
+cyan    = "#67e8f9"
+white   = "#f1f5f9"
+
+
+
+
+
